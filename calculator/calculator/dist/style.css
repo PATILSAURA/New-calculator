@@ -1,0 +1,82 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+body {
+  background-color: rgba(20, 20, 230, 0.2);
+  justify-content: center;
+  text-align: center;
+  font-family: "Roboto Mono";
+  font-size: 40px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.calculator {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 50px;
+  width: 500px;
+  margin: 20px auto;
+  padding: 25px 10px;
+}
+
+/*
+Calculator display preparing
+*/
+.numDisplay {
+  padding: 10px;
+  color: rgba(20, 255, 100, 0.7);
+}
+.numDisplay .result {
+  background-color: rgba(100, 100, 100, 0.5);
+  border: 2px inset rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  text-align: right;
+  padding: 10px;
+  height: 70px;
+  font-size: 60px;
+}
+
+/*
+Calculator pad preparing
+*/
+.clearing {
+  clear: both;
+}
+
+.basePad,
+.numPad {
+  float: left;
+  width: 74%;
+}
+
+.operationPad {
+  float: right;
+  width: 25%;
+}
+
+.pad ul {
+  list-style: none;
+  padding: 0;
+  margin: 5px;
+}
+.pad ul li {
+  display: inline-block;
+  padding: 30px;
+  border-width: 2px 0 0 2px;
+  border-style: groove;
+  border-color: rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+.pad ul li:hover {
+  border-width: 0 2px 2px 0;
+  border-style: ridge;
+  border-color: rgba(255, 255, 255, 0.7);
+}
+.pad ul li:hover:active {
+  background: rgba(100, 250, 130, 0.7);
+}
+.pad .numPad li:nth-child(10) {
+  padding: 30px 90px;
+}
+.pad .basePad li {
+  padding: 30px 45px;
+}

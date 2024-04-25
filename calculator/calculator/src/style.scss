@@ -1,0 +1,108 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto+Mono';
+
+$body-bgcolor: rgba(20, 20, 230, 0.2);
+$calc-bgcolor: rgba(0, 0, 0, 0.7);
+$display-color: rgba(100, 100, 100, 0.5);
+$display-font-color: rgba(20, 255, 100, 0.7);
+$button-font-color: rgba(255, 255, 255, 0.7);
+$button-hover-color: rgba(100, 250, 130, 0.7);
+
+$font-size: 40px;
+$button-size: 30px;
+
+body{
+  background:{
+    color: $body-bgcolor;
+  } 
+  justify-content: center;
+	text-align: center;
+	font:{
+		family: 'Roboto Mono';
+		size: $font-size;
+	}
+  color: $button-font-color;
+}
+
+.calculator{
+    background:{
+    color: $calc-bgcolor;
+  } 
+  border-radius: 50px;
+  width: 500px;
+  margin: 20px auto;
+  padding: 25px 10px;
+}  
+/*
+Calculator display preparing
+*/ 
+  .numDisplay{
+    padding: 10px;
+    color: $display-font-color;
+    .result{
+      background:{
+        color: $display-color;
+      }
+      border: 2px inset $button-font-color;
+      border-radius: 10px;
+      text-align: right;
+      padding: 10px;
+      height: 70px;
+      font:{
+        size: ($font-size*1.5);
+      }
+    } 
+  }
+
+/*
+Calculator pad preparing
+*/ 
+.clearing{
+  clear: both;
+}
+     .basePad,
+    .numPad{
+      float: left;
+      width: 74%; 
+    }
+    .operationPad{
+      float: right;
+      width: 25%;
+    }
+.pad{
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px;
+      
+    li{
+      display: inline-block;
+      padding: $button-size;
+    border: {
+      width: 2px 0 0 2px; 
+      style: groove;
+      color: $button-font-color;
+      radius: 10px;
+      }
+      margin: 5px;
+      cursor: pointer;
+      
+      &:hover{
+      border: {
+      width: 0 2px 2px 0; 
+      style: ridge;
+      color: $button-font-color;
+      }
+        &:active{
+          background: $button-hover-color;
+        }
+      }
+    }
+    
+  }
+  .numPad li:nth-child(10){
+       padding: $button-size ($button-size*2+30);
+    }
+  .basePad li{
+    padding: $button-size ($button-size*1.5);
+  }
+}
